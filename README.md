@@ -13,7 +13,7 @@ Now, to initialise and work with Article,
 ```python
 from article import Article
 
-art = Article("ARTICLE_URL")
+article = Article("ARTICLE_URL")
 ```
 
 ## 🧰 Toolkit
@@ -24,7 +24,7 @@ Turkey and Syria earthquake: what we know so far on day two](https://www.theguar
 
 We use different heuristics to automatically find the article title and article text. You can view the article by simply printing the article object.
 ```python
-print(art)
+print(article)
 ```
 Truncated output:
 ```
@@ -40,7 +40,7 @@ Aftershocks, freezing temperatures and damaged roads are hampering efforts to re
 #### 🔢 N-Grams
 N-grams are continuous sequences of words or symbols or tokens in a document.  They give information about co-occurence of different words in the document. The n-gram function accepts an argument n to determine the value of n. It returns a sorted list of tuples and their frequencies.
 ```python
-art.get_ngrams(n=3)
+article.get_ngrams(n=3)
 ```
 Truncated Output:
 ```
@@ -120,11 +120,11 @@ Domains: [Clickbait identification](https://www.kaggle.com/datasets/amananandrai
 
 ```python
 >>> article.predict_fake_news("svm")
->>> 1
+1
 ```
 ```python
 >>> article.predict_clickbait("nb")
->>> 0
+0
 ```
 For implementation, refer to [these notebooks](https://github.com/MananSuri27/Article/tree/main/notebooks).
 
@@ -211,12 +211,12 @@ This function will allow you to ask a question related to the article, and GPT3 
 
 ```python
 >>> article.gpt_ask_question("Who are the most affected by the earthquake?")
->>> 'The World Health Organization estimates that around 23 million people, including 1.4 million children, are likely to be affected by the earthquake.'
+'The World Health Organization estimates that around 23 million people, including 1.4 million children, are likely to be affected by the earthquake.'
 ```
 
 ```python
 >>>article.gpt_ask_question("Who is the fisheries minister of India ?")
->>>'Irrelevant to the article.'
+'Irrelevant to the article.'
 ```
 
 #### 🧃 Summarise using GPT3
@@ -246,7 +246,28 @@ Output:
 - Syria accused of playing politics with aid
 ```
 
+### Others
+#### Bias and Factuality
+We find bias and factuality using the databases maintained by 
+```python
+>>> article.get_bias()
+'center'
+```
+```python
+>>> article.get_factuality()
+'mixed'
+```
 
+
+## 🍿 Production Examples
+This module is used in [Asatya](https://github.com/MananSuri27/CombattingDisinformation) a web extension which offers a suite of services to analyse articles and combat disinformation.
+
+![ss 1 asatya](https://camo.githubusercontent.com/1f14b709ceaea8fe773825fdd5dba287b5dcd41761dcdde50d892c11a72a9e24/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3933333038353437363034313133343130332f3933363330363030333332393239383435322f6173617479616d61696e2e6769663f77696474683d353430266865696768743d363239)
+![ss 2 asatya](https://camo.githubusercontent.com/e02f4aeddd9276deff1f93374d93f1339788857dd751c4244d2c00719c4aebdc/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3933333038353437363034313133343130332f3933363330363035383832383333333036362f7269676874636c69636b2e6769663f77696474683d353430266865696768743d343735)
+
+
+### 🫶 Credits:
+This project was inspired by [newspaper3k](https://newspaper.readthedocs.io/), a popular tool for parsing articles that also offers some basic NLP functions.
 
 
 
