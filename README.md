@@ -53,8 +53,7 @@ Truncated Output:
  (('collapsed', 'iskenderun', ','), 24),
  .
  .
- .
- ]
+ . ]
 ```
 
 #### 🌃 Named Entity Recognition
@@ -69,13 +68,52 @@ Output:
 
 #### 📝 Extractive Summarisation
 Exctractive Summarisation picks the top p% of sentences in a document, weighted by similarity to other sentences. It's a compute efficient way of generating short summaries.
-```
+```python
 article.get_summary()
 ```
 Output:
 ```
 'Adelheid Marschang, a WHO senior emergency officer, has said about 23 million people, including 1.4 million children, are likely to be affected by the quake. On Tuesday morning, Turkey’s vice-president, Fuat Oktay, said 3,419 people had been killed in the quake, with another 20,534 injured. The students, members of a volleyball team, were in the city to compete in a sports event when their eight-floor hotel collapsed. Turkey’s disaster management agency said it had 11,342 reports of collapsed buildings, of which 5,775 had been confirmed. The number was expected to rise with the arrival of additional people, the disaster management agency official Orhan Tatar said. The four individuals were held after officers found accounts that shared “provocative posts aiming to create fear and panic”, the police said. Photograph: Erdem Şahin/EPAEmergency personnel during a search and rescue operation at the site of a building that collapsed  in Iskenderun, Hatay, in the Turkey-Syria earthquake.'
 ```
+
+#### 🔑 Keyword Extraction
+Keyword extraction refers to the task of extracting important words from the document. We implement two popular algorithms, RAKE and YAKE.
+```python
+article.get_keywords("yake")
+```
+Truncated Output
+```
+[('Turkey Syria Syria', 0.0007545710012582912),
+ ('Turkey Turkey Syria', 0.0008799549406467142),
+ ('Syria', 0.0009543548862587613),
+ ('Turkey', 0.0009992165376132955),
+ ('Erdem Şahin', 0.0017732125672323214),
+ .
+ .
+ . ]
+```
+
+article.get_keywords("rake")
+```
+Truncated Output
+```
+[('television images showed thick black smoke rising', 49.0),
+ ('television images showed thick black smoke rising', 49.0),
+ .
+ .
+ . ]
+```
+
+#### ⛅️ Word Cloud
+A word cloud is a graphical representation of word frequencies in a document.
+```
+article.get_word_cloud()
+```
+Output:
+![Word cloud](https://media.discordapp.net/attachments/891317274936483871/1072583370317504512/JqWILuA8kAAAAASUVORK5CYII.png)
+
+### 🍊 Classification Algorithms
+
 
 
 
