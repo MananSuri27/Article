@@ -26,7 +26,7 @@ We use different heuristics to automatically find the article title and article 
 ```python
 print(art)
 ```
-#### Truncated output:
+Truncated output:
 ```
 Title: Turkey and Syria earthquake: what we know so far on day two 
 Article:Turkey-Syria earthquake 2023Turkey and Syria earthquake: what we know so far on day twoUN says death toll could rise to more than 20,000 from one of the most powerful earthquakes to hit the region in at least a century
@@ -36,6 +36,50 @@ Emergency personnel during a search and rescue operation at the site of a buildi
 Aftershocks, freezing temperatures and damaged roads are hampering efforts to reach and rescue those affected by Monday’s earthquake in southern Turkey and northern Syria, which has killed more than 5,000 people and destroyed ...
 ```
 
-### Classic NLP Techniques
+### 🗣️ Classic NLP Techniques
+#### 🔢 N-Grams
+N-grams are continuous sequences of words or symbols or tokens in a document.  They give information about co-occurence of different words in the document. The n-gram function accepts an argument n to determine the value of n. It returns a sorted list of tuples and their frequencies.
+```python
+art.get_ngrams(n=3)
+```
+Truncated Output:
+```
+[(('personnel', 'search', 'rescue'), 24),
+ (('search', 'rescue', 'operation'), 24),
+ (('rescue', 'operation', 'site'), 24),
+ (('operation', 'site', 'building'), 24),
+ (('site', 'building', 'collapsed'), 24),
+ (('building', 'collapsed', 'iskenderun'), 24),
+ (('collapsed', 'iskenderun', ','), 24),
+ .
+ .
+ .
+ ]
+```
+
+#### 🌃 Named Entity Recognition
+Named entities are pre defined categories such as person names, organisations, locations etc. We use the spaCy implementation of NER which uses multi layer CNNs. The function performs NER on the article title.
+```python
+article.get_ner()
+```
+Output:
+```
+[('Turkey', 'GPE'), ('Syria', 'GPE'), ('day two', 'DATE')]
+```
+
+#### 📝 Extractive Summarisation
+Exctractive Summarisation picks the top p% of sentences in a document, weighted by similarity to other sentences. It's a compute efficient way of generating short summaries.
+```
+article.get_summary()
+```
+Output:
+```
+'Adelheid Marschang, a WHO senior emergency officer, has said about 23 million people, including 1.4 million children, are likely to be affected by the quake. On Tuesday morning, Turkey’s vice-president, Fuat Oktay, said 3,419 people had been killed in the quake, with another 20,534 injured. The students, members of a volleyball team, were in the city to compete in a sports event when their eight-floor hotel collapsed. Turkey’s disaster management agency said it had 11,342 reports of collapsed buildings, of which 5,775 had been confirmed. The number was expected to rise with the arrival of additional people, the disaster management agency official Orhan Tatar said. The four individuals were held after officers found accounts that shared “provocative posts aiming to create fear and panic”, the police said. Photograph: Erdem Şahin/EPAEmergency personnel during a search and rescue operation at the site of a building that collapsed  in Iskenderun, Hatay, in the Turkey-Syria earthquake.'
+```
+
+
+
+
+
 
 
