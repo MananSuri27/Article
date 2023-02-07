@@ -19,7 +19,7 @@ art = Article("ARTICLE_URL")
 ## 🧰 Toolkit
 
 Lets explore the different functions available by performing analysis on an article from the day this document was made, [
-Turkey and Syria earthquake: what we know so far on day two](https://www.theguardian.com/world/2023/feb/07/earthquakes-in-turkey-and-syria-what-we-know-so-far) published in [The Guarian](https://www.theguardian.com/international).
+Turkey and Syria earthquake: what we know so far on day two](https://www.theguardian.com/world/2023/feb/07/earthquakes-in-turkey-and-syria-what-we-know-so-far) published in [The Guardian](https://www.theguardian.com/international).
 ![Snapchot of the article](https://cdn.discordapp.com/attachments/891317274936483871/1072575484690432094/image.png)
 
 We use different heuristics to automatically find the article title and article text. You can view the article by simply printing the article object.
@@ -92,7 +92,7 @@ Truncated Output
  .
  . ]
 ```
-
+```python
 article.get_keywords("rake")
 ```
 Truncated Output
@@ -106,13 +106,28 @@ Truncated Output
 
 #### ⛅️ Word Cloud
 A word cloud is a graphical representation of word frequencies in a document.
-```
+```python
 article.get_word_cloud()
 ```
 Output:
 ![Word cloud](https://media.discordapp.net/attachments/891317274936483871/1072583370317504512/JqWILuA8kAAAAASUVORK5CYII.png)
 
 ### 🍊 Classification Algorithms
+We build classification pipelines for text classification using scikit-learn modules. The text input is processed with a CountVectorizer, followed by a TfidfTransformer to build a bag-of-words representation for the test. This is done only to make the pipeline efficient to use in a production environment. Better algorithms such as finetuned transformers are better suited for performance metrics.
+
+Classification Algorithms used: Naive Bayes, Decision tree, Logistic Regression, Support Vector Machine
+Domains: [Clickbait identification](https://www.kaggle.com/datasets/amananandrai/clickbait-dataset), [Fake news identification](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
+
+```python
+>>> article.predict_fake_news("svm")
+>>> 1
+```
+```python
+>>> article.predict_clickbait("nb")
+>>> 0
+```
+For implementation, refer to [these notebooks](https://github.com/MananSuri27/Article/tree/main/notebooks).
+
 
 
 
