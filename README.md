@@ -204,8 +204,8 @@ https://serpapi.com/search
 #### 🙋‍♀️ Ask Questions using GPT3
 This function will allow you to ask a question related to the article, and GPT3 returns an answer that is supposed to be related to the article. In case an irrelevant question is asked, the model answers by indicating the question is not relevant.
 ```python
->>> article.gpt_ask_question("What is Fuat Oktay? What did he say?")
->>> 'Fuat Oktay is Turkey's vice-president. He said that 3,419 people had been killed in the quake, with another 20,534 injured.'
+>>> article.gpt_ask_question("Who is Fuat Oktay? What did he say?")
+'Fuat Oktay is Turkey's vice-president. He said that 3,419 people had been killed in the quake, with another 20,534 injured.'
 ```
 
 ```python
