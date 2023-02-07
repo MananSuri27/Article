@@ -20,7 +20,7 @@ art = Article("ARTICLE_URL")
 
 Lets explore the different functions available by performing analysis on an article from the day this document was made, [
 Turkey and Syria earthquake: what we know so far on day two](https://www.theguardian.com/world/2023/feb/07/earthquakes-in-turkey-and-syria-what-we-know-so-far) published in [The Guarian](https://www.theguardian.com/international).
-!(https://cdn.discordapp.com/attachments/891317274936483871/1072575484690432094/image.png)[Snapchot of the article]
+![Snapchot of the article](https://cdn.discordapp.com/attachments/891317274936483871/1072575484690432094/image.png)
 
 We use different heuristics to automatically find the article title and article text. You can view the article by simply printing the article object.
 ```python
