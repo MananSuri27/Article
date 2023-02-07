@@ -246,9 +246,10 @@ Output:
 - Syria accused of playing politics with aid
 ```
 
-### Others
-#### Bias and Factuality
-We find bias and factuality using the databases maintained by 
+### 👥 Others
+#### 🥽 Bias and Factuality
+We find bias and factuality using the databases maintained by [Media Bias/Fact Check](https://mediabiasfactcheck.com/) who claim "We are the most comprehensive media bias resource on the internet. There are currently 5700+ media sources and journalists listed in our database and growing every day.".
+
 ```python
 >>> article.get_bias()
 'center'
