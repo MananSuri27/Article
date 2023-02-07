@@ -178,8 +178,8 @@ Topic	Count	Name
 	9	14	9_earthquake_toll_death_syria
  10	12	10_deployed_24400_area_more
 ```
-### 🌐 Mining additional data
-#### 🤹 Similar Articles[^1]
+### 🌐 Mining additional data 
+#### 🤹 Similar Articles [1]
 We extract keywords and perform web searches to find similar articles. 
 ```python
 article.get_similar_articles()
@@ -200,7 +200,7 @@ https://serpapi.com/search
  .]
 ```
 
-### 🪄 State of the Art NLP: Prompting GPT3[^2]
+### 🪄 State of the Art NLP: Prompting GPT3 [2]
 
 #### 🙋‍♀️ Ask Questions using GPT3
 This function will allow you to ask a question related to the article, and GPT3 returns an answer that is supposed to be related to the article. In case an irrelevant question is asked, the model answers by indicating the question is not relevant.
@@ -252,8 +252,9 @@ Output:
 
 
 
-[^1] You will need to configure [SERPApi](https://serpapi.com/) keys. It might demand a paid subscription.
-[^2] You will need to configure [OpenAI](https://openai.com/) keys . It might demand a paid subscription.
+[1] You will need to configure [SERPApi](https://serpapi.com/) keys. It might demand a paid subscription.
+
+[2] You will need to configure [OpenAI](https://openai.com/) keys . It might demand a paid subscription.
 
 
 
