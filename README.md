@@ -1,6 +1,8 @@
 # 🗞️ Article 
 Tool to parse + perform NLP on web articles.
 
+![Visual explanation](https://cdn.discordapp.com/attachments/891317274936483871/1072652456397381713/JJleXIig2kUfXmUqt8vcMQhfxtf8BRDDGRr7GutUAAAAASUVORK5CYII.png)
+
 ## 🔩 Usage 
 Follow the following steps to set up the module:
 ```bash
@@ -15,7 +17,7 @@ from article import Article
 
 article = Article("ARTICLE_URL")
 ```
-![Visual explanation](https://cdn.discordapp.com/attachments/891317274936483871/1072652456397381713/JJleXIig2kUfXmUqt8vcMQhfxtf8BRDDGRr7GutUAAAAASUVORK5CYII.png)
+
 ## 🧰 Toolkit
 
 Lets explore the different functions available by performing analysis on an article from the day this document was made, [
