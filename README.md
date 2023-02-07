@@ -15,12 +15,11 @@ from article import Article
 
 article = Article("ARTICLE_URL")
 ```
-
+![Visual explanation](https://cdn.discordapp.com/attachments/891317274936483871/1072652456397381713/JJleXIig2kUfXmUqt8vcMQhfxtf8BRDDGRr7GutUAAAAASUVORK5CYII.png)
 ## 🧰 Toolkit
 
 Lets explore the different functions available by performing analysis on an article from the day this document was made, [
-Turkey and Syria earthquake: what we know so far on day two](https://www.theguardian.com/world/2023/feb/07/earthquakes-in-turkey-and-syria-what-we-know-so-far) published in [The Guardian](https://www.theguardian.com/international).
-![Snapchot of the article](https://cdn.discordapp.com/attachments/891317274936483871/1072575484690432094/image.png)
+Turkey and Syria earthquake: what we know so far on day two](https://www.theguardian.com/world/2023/feb/07/earthquakes-in-turkey-and-syria-what-we-know-so-far) published in [The Guardian](https://www.theguardian.com/international). (The same article who's screenshot is attached in the above diagram)
 
 We use different heuristics to automatically find the article title and article text. You can view the article by simply printing the article object.
 ```python
