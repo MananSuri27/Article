@@ -167,17 +167,17 @@ Printed topic hierarchy:
 Topic Model:
 ```
 Topic	Count	Name
-	0	30	0_in_hotel_being_students
-	1	30	1_aid_is_syrian_government
-	2	30	2_people_million_said_with
-	3	21	3_and_feb_2023_efforts
-	4	21	4_had_11342_5775_reports
-	5	20	5_police_posts_provocative_four
-	6	20	6_sites_heritage_damage_unesco
-	7	20	7_building_during_iskenderun_hatay
-	8	20	8_from_the_thick_black
-	9	14	9_earthquake_toll_death_syria
- 10	12	10_deployed_24400_area_more
+0	30	0_in_hotel_being_students
+1	30	1_aid_is_syrian_government
+2	30	2_people_million_said_with
+3	21	3_and_feb_2023_efforts
+4	21	4_had_11342_5775_reports
+5	20	5_police_posts_provocative_four
+6	20	6_sites_heritage_damage_unesco
+7	20	7_building_during_iskenderun_hatay
+8	20	8_from_the_thick_black
+9	14	9_earthquake_toll_death_syria
+10	12	10_deployed_24400_area_more
 ```
 ### 🌐 Mining additional data 
 #### 🤹 Similar Articles [1]
