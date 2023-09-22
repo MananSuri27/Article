@@ -172,4 +172,47 @@ class Article:
     title_final = title_splits[0]
 
     return title_final
+  def get_date(self):
 
+    '''
+    Function to get the publishing date of the article.
+    Inspired by newspaper3k, it iterates over a list of possible tags and returns the first matched tag it finds.
+
+    Returns:
+    Date string or None depending on if date is found.
+    '''
+
+
+    PUBLISH_DATE_TAGS = [
+            {'attribute': 'property', 'value': 'rnews:datePublished',
+             'content': 'content'},
+            {'attribute': 'property', 'value': 'article:published_time',
+             'content': 'content'},
+            {'attribute': 'name', 'value': 'OriginalPublicationDate',
+             'content': 'content'},
+            {'attribute': 'itemprop', 'value': 'datePublished',
+             'content': 'datetime'},
+            {'attribute': 'property', 'value': 'og:published_time',
+             'content': 'content'},
+            {'attribute': 'name', 'value': 'article_date_original',
+             'content': 'content'},
+            {'attribute': 'name', 'value': 'publication_date',
+             'content': 'content'},
+            {'attribute': 'name', 'value': 'sailthru.date',
+             'content': 'content'},
+            {'attribute': 'name', 'value': 'PublishDate',
+             'content': 'content'},
+            {'attribute': 'pubdate', 'value': 'pubdate',
+             'content': 'datetime'},
+            {'attribute': 'name', 'value': 'publish_date',
+             'content': 'content'},
+        ]
+
+    for known_meta_tag in PUBLISH_DATE_TAGS:
+        meta_tags = self.soup.find_all( attrs={known_meta_tag['attribute']:known_meta_tag['value']})
+        if meta_tags:
+            date_str = meta_tags[0].get(known_meta_tag['content'])
+            if date_str:
+              return date_str
+    return None
+            
