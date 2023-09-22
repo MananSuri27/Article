@@ -260,6 +260,9 @@ We find bias and factuality using the databases maintained by [Media Bias/Fact C
 'mixed'
 ```
 
+## New:
+
+`article_stripped.py` which simply parses the article without all the other features. Useful when we want to build on top of Article.
 
 ## 🍿 Production Examples
 This module is used in [Asatya](https://github.com/MananSuri27/CombattingDisinformation) a web extension which offers a suite of services to analyse articles and combat disinformation.
